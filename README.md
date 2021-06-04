@@ -67,9 +67,9 @@ Users should be able to:
 
   
 
-- Solution URL: [Add solution URL here](https://github.com/Devang47/Project-15-Minimal-calc/tree/main/design)
+- Solution URL: [Github Repo](https://github.com/Devang47/Project-15-Minimal-calc/tree/main/design)
 
-- Live Site URL: [Add live site URL here](https://dazzling-kepler-73a55a.netlify.app/)
+- Live Site URL: [LIVE here](https://dazzling-kepler-73a55a.netlify.app/)
 
   
 
