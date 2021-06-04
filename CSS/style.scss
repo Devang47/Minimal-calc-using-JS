@@ -7,6 +7,9 @@
   font-family: "Spartan";
 }
 
+
+
+
 :root {
   --body-bg: hsl(222, 26%, 31%);
   --keypad-bg: hsl(223, 31%, 20%);
@@ -19,6 +22,21 @@
   --grey-shadow: hsl(28, 16%, 65%);
   --txt: hsl(221, 14%, 31%);
   --white: #fff;
+  --title: #fff;
+}
+.dark{
+    --body-bg:  hsl(0, 0%, 90%);
+  --keypad-bg:  hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --button-bg:  hsl(185, 42%, 37%);
+  --button-shadow: hsl(185, 58%, 25%);
+  --red: hsl(25, 98%, 40%);
+  --dark-red: hsl(25, 99%, 27%);
+  --grey-orange:  hsl(45, 7%, 89%);
+  --grey-shadow: hsl(35, 11%, 61%);
+  --txt: hsl(60, 10%, 19%);
+  --white: #fff;
+  --title : hsl(60, 10%, 19%);
 }
 html {
   height: 100%;
@@ -34,13 +52,47 @@ body {
     display: flex;
     align-items: baseline;
     font-size: 28px;
-    color: var(--white);
+    color: var(--title);
     span {
       margin-right: auto;
     }
-    .theme{
+    #theme{
         color: var(--red);
-        font-size: 20px;
+        height: 24px;
+        width: 49px;
+        margin-right: 5px;
+        .outer{
+          height: 100%;
+          width: 100%;
+          background-color: var(--grey-orange);
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          border: 3px solid var(--button-shadow);
+          position: relative;
+        }
+        .inner{
+          width: 50%;
+          height: 75%;
+          border-radius: 50px;
+          margin: auto 3px;
+          background: var(--button-bg);
+          position: absolute;
+          transition: all 0.2s ease;
+        }
+        .theme2{
+          left: 16px;
+          transition: all 0.2s ease;
+          animation: switch 0.2s ease;
+        }
+        @keyframes switch {
+          // from{
+            
+          // }
+          to{
+            left: 16px;
+          }
+        }
     }
     margin-bottom: 20px;
   }
@@ -64,11 +116,14 @@ body {
         transition: 0.3s ease;
         opacity: 0;
         svg{
-            height: 25px;
-            color: #fff;
-            fill: grey;
-            width: 30px;
-            margin: 0 10px 0 20px;
+          height: 25px;
+          color: #fff;
+          fill: var(--red);
+          width: 30px;
+          margin: 0 10px 0 20px;
+          &:active{
+            fill: var(--dark-red);
+          }
         }
     }
 
@@ -79,17 +134,21 @@ body {
       overflow-y: hidden;
     }
     input{
-        color: grey;
-        background-color: #0000;
-        border: none;
-        outline: none;
-        text-align: right;
-        overflow: auto;
-        font-size: 32px;
+      color: var(--title);
+      background-color: #0000;
+      border: none;
+      outline: none;
+      text-align: right;
+      overflow: auto;
+      font-size: 32px;
         padding: 25px 10px 10px 10px;
         height: 80%;
         width: 100%;
-    }
+        &::placeholder{
+          color: grey;
+
+        }
+      }
   }
   .buttons {
     display: grid;
@@ -108,7 +167,8 @@ body {
       margin-bottom: 20px;
       text-align: center;
       border-radius: 9px;
-      box-shadow: 0 3px 0 var(--grey-shadow) , 0px 0 20px var(--button-shadow) ;
+      box-shadow: 0 3px 0 var(--grey-shadow) ;
+      // , 0px 0 10px var(--button-shadow) 
         color: var(--txt);
         // display: grid;
         padding-top: 8px;
@@ -160,4 +220,22 @@ body {
 ::selection {
   color: white;
   background: black;
+}
+
+@media screen and (max-width: 600px ){
+  body{
+  }
+  .items{
+    .top{
+      width: 350px;
+      margin: 0 auto 20px;
+    }
+    .output{
+      width: 350px;
+      margin: 0 auto;
+    }
+    .buttons{
+      width: 350px;
+    }
+  }
 }
