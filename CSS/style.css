@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spartan";
+}
+
+:root {
+  --body-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --button-bg: hsl(225, 21%, 49%);
+  --button-shadow: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --grey-orange: hsl(30, 25%, 89%);
+  --grey-shadow: hsl(28, 16%, 65%);
+  --txt: hsl(221, 14%, 31%);
+  --white: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--body-bg);
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.items .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.items .top span {
+  margin-right: auto;
+}
+
+.items .top .theme {
+  color: var(--red);
+  font-size: 20px;
+}
+
+.items .output {
+  height: 100px;
+  background-color: var(--screen-bg);
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 9px;
+}
+
+.items .output:hover button {
+  opacity: 1;
+}
+
+.items .output button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.items .output button svg {
+  height: 25px;
+  color: #fff;
+  fill: grey;
+  width: 30px;
+  margin: 0 10px 0 20px;
+}
+
+.items .output .input {
+  width: 400px;
+  margin: auto 0;
+  overflow-y: hidden;
+}
+
+.items .output input {
+  color: grey;
+  background-color: #0000;
+  border: none;
+  outline: none;
+  text-align: right;
+  overflow: auto;
+  font-size: 32px;
+  padding: 25px 10px 10px 10px;
+  height: 80%;
+  width: 100%;
+}
+
+.items .buttons {
+  display: -ms-grid;
+  display: grid;
+  width: 400px;
+  -ms-grid-columns: (20%)[4];
+      grid-template-columns: repeat(4, 20%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 400px;
+  padding: 20px;
+  border-radius: 9px;
+  margin-top: 15px;
+  background-color: var(--keypad-bg);
+}
+
+.items .buttons button {
+  background-color: var(--grey-orange);
+  border: none;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 3px 0 var(--grey-shadow), 0px 0 20px var(--button-shadow);
+          box-shadow: 0 3px 0 var(--grey-shadow), 0px 0 20px var(--button-shadow);
+  color: var(--txt);
+  padding-top: 8px;
+}
+
+.items .buttons button:active {
+  background-color: var(--grey-shadow);
+  position: relative;
+  top: 3px;
+}
+
+.items .buttons .red {
+  background-color: var(--red);
+  -webkit-box-shadow: 0 3px 0 var(--dark-red);
+          box-shadow: 0 3px 0 var(--dark-red);
+  color: var(--white);
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.items .buttons .red:active {
+  background-color: var(--dark-red);
+  position: relative;
+  top: 3px;
+  -webkit-box-shadow: inset 0 4px 10px #0003;
+          box-shadow: inset 0 4px 10px #0003;
+}
+
+.items .buttons .blue {
+  background-color: var(--button-bg);
+  -webkit-box-shadow: 0 3px 0 var(--button-shadow);
+          box-shadow: 0 3px 0 var(--button-shadow);
+  color: var(--white);
+  font-size: 18px;
+  padding-top: 4px;
+}
+
+.items .buttons .blue:active {
+  background-color: var(--button-shadow);
+  position: relative;
+  top: 3px;
+}
+
+.items .buttons .reset {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="items">
+      <div class="top">
+        <span>calc</span>
+        <div class="theme">THEME</div>
+      </div>
+      <div class="output">
+        <button class="svg"  id="copyText" onclick="copyit()" >
+        <svg  height="512pt" viewBox="-21 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg" ><path d="m186.667969 416c-49.984375 0-90.667969-40.683594-90.667969-90.667969v-218.664062h-37.332031c-32.363281 0-58.667969 26.300781-58.667969 58.664062v288c0 32.363281 26.304688 58.667969 58.667969 58.667969h266.664062c32.363281 0 58.667969-26.304688 58.667969-58.667969v-37.332031zm0 0"/><path d="m469.332031 58.667969c0-32.40625-26.261719-58.667969-58.664062-58.667969h-224c-32.40625 0-58.667969 26.261719-58.667969 58.667969v266.664062c0 32.40625 26.261719 58.667969 58.667969 58.667969h224c32.402343 0 58.664062-26.261719 58.664062-58.667969zm0 0"/></svg></button>
+        <div class="input">
+        <input class="output-box" id="answerbox" value="" placeholder="123456789" onkeydown="color()">
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button" id="btn-7" onclick="inputreciever(7)">7</button>
+        <button class="button" id="btn-8" onclick="inputreciever(8)">8</button>
+        <button class="button" id="btn-8" onclick="inputreciever(9)">9</button>
+        <button class="button blue" id="btn-clr" onclick="deleteLast()">
+          DEL
+        </button>
+        <button class="button" id="btn-4" onclick="inputreciever(4)">4</button>
+        <button class="button" id="btn-5" onclick="inputreciever(5)">5</button>
+        <button class="button" id="btn-6" onclick="inputreciever(6)">6</button>
+        <button class="button dark" id="btn-add" onclick="inputreciever('+')">
+          +
+        </button>
+        <button class="button" id="btn-1" onclick="inputreciever(1)">1</button>
+        <button class="button" id="btn-2" onclick="inputreciever(2)">2</button>
+        <button class="button" id="btn-3" onclick="inputreciever(3)">3</button>
+        <button
+        class="button dark"
+        id="bbtn-sub"
+        onclick="inputreciever('-')"
+        >
+        -
+      </button>
+      <button class="button" id="btn-pnt" onclick="inputreciever('.')">
+        .
+      </button>
+      <button class="button" id="btn-0" onclick="inputreciever(0)">0</button>
+      <button class="button dark" id="btn-div" onclick="inputreciever('/')">
+        /
+      </button>
+      <button class="button dark" id="btn-mul" onclick="inputreciever('*')">
+        ×
+      </button>
+      <button class="button blue reset" id="btn-clr" onclick="reset()">
+        RESET
+      </button>
+      <button class="button red" id="btn-eql" onclick="findans()">=</button>
+    </div>
+  </div>
+<script src="./JS/index.js"></script>
+</body>
+</html>
