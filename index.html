@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="output">
-        <button class="svg" id="copyText" onclick="copyit()">
+        <button class="svg" id="copyText" onclick="copyit()" name="themeswitcher">
           <svg
             height="512pt"
             viewBox="-21 0 512 512"
@@ -33,7 +33,9 @@
           </svg>
         </button>
         <div class="input">
+          <label for="answerbox"></label>
           <input
+          name="answerbox"
             class="output-box"
             id="answerbox"
             value=""
@@ -45,8 +47,8 @@
       <div class="buttons">
         <button class="button" id="btn-7" onclick="inputreciever(7)">7</button>
         <button class="button" id="btn-8" onclick="inputreciever(8)">8</button>
-        <button class="button" id="btn-8" onclick="inputreciever(9)">9</button>
-        <button class="button blue" id="btn-clr" onclick="deleteLast()">
+        <button class="button" id="btn-9" onclick="inputreciever(9)">9</button>
+        <button class="button blue" id="btn-dtl" onclick="deleteLast()">
           DEL
         </button>
         <button class="button" id="btn-4" onclick="inputreciever(4)">4</button>
