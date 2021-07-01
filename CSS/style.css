@@ -147,13 +147,13 @@ body {
 .items .output button svg {
   height: 25px;
   color: #fff;
-  fill: var(--red);
+  fill: #dddddd;
   width: 30px;
   margin: 0 10px 0 20px;
 }
 
 .items .output button svg:active {
-  fill: var(--dark-red);
+  fill: white;
 }
 
 .items .output .input {

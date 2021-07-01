@@ -118,11 +118,11 @@ body {
         svg{
           height: 25px;
           color: #fff;
-          fill: var(--red);
+          fill: rgb(221, 221, 221);
           width: 30px;
           margin: 0 10px 0 20px;
           &:active{
-            fill: var(--dark-red);
+            fill: white;
           }
         }
     }
